@@ -1,0 +1,30 @@
+import pygal
+
+# create a bar chart object
+chart = pygal.Line()
+
+# add data to the chart
+chart.add('Data Set Name', [1,3,2,5,4])
+
+# customize the chart title, axis labels, axis title and legend
+chart.title = "Customized Chart Title"
+
+chart.x_title = 'Customized X-axis Label'
+chart.x_labels = ['Label 1','Label 2','Label 3','Label 4','Label 5']
+
+chart.y_title = 'Customized Y-axis Label'
+chart.y_labels = [10,20,30,40,50]
+
+chart.legend_at_bottom = True
+chart.legend_box_size = 16
+
+# customize the colors of the bars
+chart.colors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF']
+
+# render the chart to an SVG file
+chart.render_to_file('customized_chart.svg')
+
+
+
+
+
